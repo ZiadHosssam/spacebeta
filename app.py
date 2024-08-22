@@ -22,6 +22,7 @@ def home():
 def clear_messages():
     save_messages([])  # Save an empty list to clear the file
     return '', 204
+
 @app.route('/send_message', methods=['POST'])
 def send_message():
     data = request.json
