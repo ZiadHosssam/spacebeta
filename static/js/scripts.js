@@ -19,6 +19,13 @@ function fetchMessages() {
         .then(data => updateChatArea(data))
         .catch(error => console.error('Error fetching messages:', error));
 }
+function clearMessages() {
+    fetch('/clear_messages', {
+        method: 'POST'
+    }).then(() => {
+        chatArea.innerHTML = '';  // Clear the chat area on the front end
+    }).catch(error => console.error('Error clearing messages:', error));
+}
 
 function sendMessage(event) {
     event.preventDefault();
