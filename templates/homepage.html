@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space - Your Online Therapy Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div id="logo">
+                <a href="/">Space</a>
+            </div>
+            <nav id="nav-menu">
+                <a href="#therapists">Our Therapists</a>
+                <a href="#booking">Book a Session</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h1>Welcome to Space</h1>
+            <p>Your safe space for online therapy. Connect with licensed therapists from the comfort of your home.</p>
+            <a href="/patient" class="button">Start Chat Without Account</a>
+        </section>
+
+        <section id="therapists">
+            <h2>Our Licensed Therapists</h2>
+            <div class="therapist-container">
+                <div class="therapist">
+                    <h3>Dr. Dustin Henderson</h3>
+                    <p>Specializes in anxiety management and cognitive behavioral therapy.</p>
+                </div>
+                <div class="therapist">
+                    <h3>Dr. Eleven</h3>
+                    <p>Expert in depression treatment, stress relief, and mindfulness techniques.</p>
+                </div>
+                <div class="therapist">
+                    <h3>Dr. Max Mayfield</h3>
+                    <p>Focuses on relationship counseling, family therapy, and emotional support.</p>
+                </div>
+                <div class="therapist">
+                    <h3>Dr. Hassan</h3>
+                    <p>Specializes in treating schizophrenia and other complex mental health conditions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking">
+            <h2>Book Your Therapy Session</h2>
+            <div class="sessions-container">
+                <div id="unbooked-session-1" class="session-card">
+                    <h3>Session with Dr. Hassan</h3>
+                    <p>Date: August 25, 2024</p>
+                    <p>Time: 3:00 PM</p>
+                    <button onclick="bookSession('unbooked-session-1')">Book Session</button>
+                </div>
+                <div id="unbooked-session-2" class="session-card">
+                    <h3>Session with Dr. Dustin Henderson</h3>
+                    <p>Date: September 1, 2024</p>
+                    <p>Time: 10:00 AM</p>
+                    <button onclick="bookSession('unbooked-session-2')">Book Session</button>
+                </div>
+                <div id="unbooked-session-3" class="session-card">
+                    <h3>Session with Dr. Eleven</h3>
+                    <p>Date: September 5, 2024</p>
+                    <p>Time: 1:00 PM</p>
+                    <button onclick="bookSession('unbooked-session-3')">Book Session</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Space</h2>
+            <p>At Space, we believe that everyone deserves access to quality mental health care. Our platform connects you with licensed therapists through secure video chat, providing a safe and comfortable environment for your therapy sessions. Whether you're dealing with anxiety, depression, or just need someone to talk to, Space is here to support your mental health journey.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Space. All rights reserved. | Designed by Ziad Hossam</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/homepage.js') }}" defer></script>
+</body>
+</html>

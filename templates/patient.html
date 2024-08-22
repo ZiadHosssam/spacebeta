@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space - Chat Interface</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/patient.css') }}">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjYwIiB2aWV3Ym94PSIwIDAgMTUwIDYwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgICAgICAgICAgICAgPHRleHQgeD0iMCIgeT0iNTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI0NSIgZmlsbD0iI2ZmZmZmZiI+U3BhY2U8L3RleHQ+CiAgICAgICAgICAgIDwvc3ZnPg==" alt="Space Logo">
+        </div>
+    </header>
+
+    <main id="chat-container">
+        <div id="chat-area"></div>
+        <form id="message-form">
+            <input type="text" id="message-input" placeholder="Type your message..." autocomplete="off">
+            <button type="submit" id="send-button">Send</button>
+        </form>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/patient.js') }}"></script>
+</body>
+</html>

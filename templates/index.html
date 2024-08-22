@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-area"></div>
+        <form id="message-form" onsubmit="sendMessage(event)">
+            <input id="message-input" type="text" placeholder="Type your message..." required />
+            <button id="send-button" type="submit">Send</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
