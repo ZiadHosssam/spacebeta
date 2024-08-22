@@ -38,3 +38,13 @@ function sendMessage(event) {
 // Initial fetch of messages and set interval to update chat
 fetchMessages();
 setInterval(fetchMessages, 2000);
+
+
+
+/*
+fetch('/clear_messages', {
+    method: 'POST'
+})
+.then(() => console.log('Messages cleared'))
+.catch(error => console.error('Error clearing messages:', error));
+*/

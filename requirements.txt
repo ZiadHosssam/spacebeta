@@ -1,8 +1,1 @@
 Flask==3.0.3
-
-
-fetch('/clear_messages', {
-    method: 'POST'
-})
-.then(() => console.log('Messages cleared'))
-.catch(error => console.error('Error clearing messages:', error));
